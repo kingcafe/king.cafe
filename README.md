@@ -117,7 +117,7 @@
 
     <div id="sections">
         <div class="section active" style="background-image: url('nwee.jpg');">
-          <img src="foodd.jpg" alt="Food Section" />
+         
             <h2>تامەکان</h2> <br> <br>
             <ul>
                 <li>King 1</li><li>King 2</li><li>King 3</li><li>King 4</li>
