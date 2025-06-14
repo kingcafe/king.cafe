@@ -116,7 +116,7 @@
     </nav>
 
     <div id="sections">
-        <div class="section active" style="background-image: url('nn.jpg');">
+        <div class="section active" style="background-image: url('nwe.jpg');">
             <h2>تامەکان</h2>
             <ul>
                 <li>King 1</li><li>King 2</li><li>King 3</li><li>King 4</li>
@@ -133,7 +133,7 @@
       </ul>
         </div>
 
-        <div class="section" style="background-image: url('your-image2.jpg');">
+        <div class="section" style="background-image: url('fod.jpg');">
             <h2>خواردن</h2>
             <ul>
                 <li>٤٠٠٠،٦٠٠٠،٨٠٠٠،١٠٠٠٠پیزا</li>
