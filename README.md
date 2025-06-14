@@ -116,7 +116,7 @@
     </nav>
 
     <div id="sections">
-        <div class="section active" style="background-image: url('nwe.jpeg');">
+        <div class="section active" style="background-image: url('ner.jpg');">
             <h2>تامەکان</h2>
             <ul>
                 <li>King 1</li><li>King 2</li><li>King 3</li><li>King 4</li>
