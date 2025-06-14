@@ -116,7 +116,7 @@
     </nav>
 
     <div id="sections">
-        <div class="section active" style="background-image: url('.jpg');">
+        <div class="section active" style="background-image: url('nwee.jpg');">
           <img src="foodd.jpg" alt="Food Section" />
             <h2>تامەکان</h2> <br> <br>
             <ul>
@@ -134,7 +134,8 @@
       </ul>
         </div>
 
-        <div class="section" style="background-image: url('foodd.jpg');">
+        <div class="section" style="background-image: url('.jpg');">
+         <img src="foodd.jpg" alt="Food Section" />
             <h2>خواردن</h2>
            
         </div>
