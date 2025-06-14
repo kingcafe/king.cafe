@@ -117,7 +117,7 @@
 
     <div id="sections">
         <div class="section active" style="background-image: url('nwee.jpg');">
-            <h2>تامەکان</h2>
+            <h2>تامەکان</h2> <br> <br>
             <ul>
                 <li>King 1</li><li>King 2</li><li>King 3</li><li>King 4</li>
                 <li>King 5</li><li>King 6</li><li>King 7</li><li>King 8</li>
