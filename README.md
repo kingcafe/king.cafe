@@ -133,15 +133,9 @@
       </ul>
         </div>
 
-        <div class="section" style="background-image: url('fod.jpg');">
+        <div class="section" style="background-image: url('food.jpg');">
             <h2>خواردن</h2>
-            <ul>
-                <li>٤٠٠٠،٦٠٠٠،٨٠٠٠،١٠٠٠٠پیزا</li>
-                <li>King 2</li><li>King 3</li><li>King 4</li><li>King 5</li>
-                <li>King 6</li><li>King 7</li><li>King 8</li><li>King 9</li>
-                <li>King 10</li><li>King 11</li><li>Dw Sew</li>
-                <li>بنیشت</li><li>بغدادی</li><li>کاسترۆ</li><li>لیمۆ</li>
-            </ul>
+           
         </div>
 
         <div class="section" style="background-image: url('your-image3.jpg');">
