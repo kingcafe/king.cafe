@@ -124,7 +124,7 @@
                 <li>King 9</li><li>King 10</li><li>King 11</li><li>Dw Sew</li>
                 <li>بنیشت</li><li>بغدادی</li><li>کاسترۆ</li><li>لیمۆ</li>
             </ul>
-              </ul>
+            
       <h2>فرێشەکان</h2>
       <ul style="position: relative;">
         <li>سندی</li><li>ئەنەناس</li><li>فرێش vip</li>
