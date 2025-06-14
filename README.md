@@ -133,7 +133,7 @@
       </ul>
         </div>
 
-        <div class="section" style="background-image: url('food.jpg');">
+        <div class="section" style="background-image: url('foodd.jpg');">
             <h2>خواردن</h2>
            
         </div>
