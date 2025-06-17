@@ -98,7 +98,7 @@
 <body>
     <header>
         <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-            <img src="logo.png" alt="Logo" style="width: 40px; height: 40px;">
+            <img src="logo.jpg" alt="Logo" style="width: 55px; height: 55px;">
             <h1 style="color:red; margin: 0; text-decoration: none;">King Cafe</h1>
         </div>
     </header>
@@ -163,15 +163,13 @@
     <footer style="background-color: #222; color: white; text-align: center; padding: 20px;">
         <h2 style="margin-bottom: 10px;">Contact Us</h2>
         <div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
-            <a href="https://facebook.com" target="_blank">
-                <img src="facebook.png" alt="Facebook" style="width: 30px; height: 30px;">
+            <a href="https://www.snapchat.com/add/king.cafe1">
+                <img src="snap.png" alt="snapchat" style="width: 30px; height: 30px;">
             </a>
-            <a href="https://instagram.com" target="_blank">
-                <img src="instagram.png" alt="Instagram" style="width: 30px; height: 30px;">
+            <a href="https://www.instagram.com/king.cafe1?igsh=MTg5M2E0cnlsaGRscA==">
+                <img src="insta.png" alt="Instagram" style="width: 30px; height: 30px;">
             </a>
-            <a href="https://wa.me/your-number" target="_blank">
-                <img src="whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;">
-            </a>
+          
         </div>
     </footer>
 
