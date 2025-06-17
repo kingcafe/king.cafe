@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -47,7 +47,7 @@
         }
 
         nav button.active {
-            background-color: gold;
+            background-color: red;
             color: black;
             font-weight: bold;
         }
@@ -57,7 +57,7 @@
             padding: 20px;
             background-size: cover;
             background-position: center;
-            color: #fff;
+            color: black;
             min-height: 300px;
         }
 
