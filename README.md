@@ -145,13 +145,12 @@
 
         <div class="section" style="background-image: url('your-image5.jpg');">
             <h2>Section 5</h2>
-           <img src="shirn.jpg" alt="Food Section" />
+    
         </div>
 
         <div class="section" style="background-image: url('your-image6.jpg');">
             <h2>Section 6</h2>
-            <ul><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li></ul>
-        </div>
+              <img src="shirn.jpg" alt="Food Section" />
 
         <div class="section" style="background-image: url('your-image7.jpg');">
             <h2>Section 7</h2>
