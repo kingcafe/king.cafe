@@ -121,7 +121,7 @@
 <body>
     <header>
         <div class="logo-title">
-            <img src="logo.png" alt="Logo" class="logo">
+            <img src="logo.jpg" alt="Logo" class="logo">
             <h1>King Cafe</h1>
         </div>
     </header>
