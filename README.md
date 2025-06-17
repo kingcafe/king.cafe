@@ -47,7 +47,7 @@
         }
 
         nav button.active {
-            background-color: red;
+            background-color: black;
             color: black;
             font-weight: bold;
         }
