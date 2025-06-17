@@ -99,8 +99,7 @@
     <header>
         <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
             <img src="logo.jpg" alt="Logo" style="width: 55px; height: 55px;">
-           <h1 style="color:red; margin: 0; text-decoration: none;">King Cafe</h1>
-
+            <h1 style="color:red; margin: 0; text-decoration: none;">King Cafe</h1>
         </div>
     </header>
 
