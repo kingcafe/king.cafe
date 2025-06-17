@@ -1,9 +1,9 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >King Cafe</title>
+    <title>King Cafe</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,9 +13,22 @@
         }
 
         header {
-            background-color:black ;
+            background-color: black;
             text-align: center;
             padding: 20px;
+        }
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
         }
 
         header h1 {
@@ -97,47 +110,50 @@
                 font-size: 20px;
                 padding: 15px;
             }
+
+            .logo {
+                width: 30px;
+                height: 30px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1 style="color:red;">King Cafe</h1>
+        <div class="logo-title">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>King Cafe</h1>
+        </div>
     </header>
 
     <nav>
         <button onclick="showSection(0)" class="active">نێرگەلەکان</button>
         <button onclick="showSection(1)">خواردن</button>
-        <button onclick="showSection(2)"> خواردنەوە فرێشەکان</button>
+        <button onclick="showSection(2)">خواردنەوە فرێشەکان</button>
         <button onclick="showSection(3)">خواردنەوە گازیەکان</button>
         <button onclick="showSection(4)">خواردنەوە گەرمەکان</button>
         <button onclick="showSection(5)">شیرینی</button>
-       
     </nav>
 
     <div id="sections">
         <div class="section active" style="background-image: url('nwee.jpg');">
-         
-            <h2>تامەکان</h2> <br> <br>
+            <h2>تامەکان</h2><br><br>
             <ul>
                 <li>King 1</li><li>King 2</li><li>King 3</li><li>King 4</li>
                 <li>King 5</li><li>King 6</li><li>King 7</li><li>King 8</li>
                 <li>King 9</li><li>King 10</li><li>King 11</li><li>Dw Sew</li>
                 <li>بنیشت</li><li>بغدادی</li><li>کاسترۆ</li><li>لیمۆ</li>
             </ul>
-            
-      <h2>فرێشەکان</h2>
-      <ul style="position: relative;">
-        <li>سندی</li><li>ئەنەناس</li><li>فرێش vip</li>
-       
-    
-      </ul>
+
+            <h2>فرێشەکان</h2>
+            <ul style="position: relative;">
+                <li>سندی</li><li>ئەنەناس</li><li>فرێش vip</li>
+            </ul>
         </div>
 
-        <div class="section" style="background-image: url('.jpg');">
-         <img src="foodd.jpg" alt="Food Section" />
+        <div class="section" style="background-image: url('foodd.jpg');">
+            <img src="foodd.jpg" alt="Food Section" />
             <h2>خواردن</h2>
-           
         </div>
 
         <div class="section" style="background-image: url('your-image3.jpg');">
