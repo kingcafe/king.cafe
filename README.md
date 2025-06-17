@@ -164,10 +164,10 @@
         <h2 style="margin-bottom: 10px;">Contact Us</h2>
         <div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
             <a href="https://www.snapchat.com/add/king.cafe1">
-                <img src="snap.png" alt="snapchat" style="width: 30px; height: 30px;">
+                <img src="snap.jpg" alt="snapchat" style="width: 30px; height: 30px;">
             </a>
             <a href="https://www.instagram.com/king.cafe1?igsh=MTg5M2E0cnlsaGRscA==">
-                <img src="insta.png" alt="Instagram" style="width: 30px; height: 30px;">
+                <img src="insta.jpg" alt="Instagram" style="width: 30px; height: 30px;">
             </a>
           
         </div>
