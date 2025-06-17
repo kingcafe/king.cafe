@@ -13,7 +13,7 @@
         }
 
         header {
-            background-color: red;
+            background-color:black ;
             text-align: center;
             padding: 20px;
         }
@@ -47,7 +47,7 @@
         }
 
         nav button.active {
-            background-color: black;
+            background-color: red;
             color: black;
             font-weight: bold;
         }
