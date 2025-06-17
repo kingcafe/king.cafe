@@ -112,8 +112,8 @@
             }
 
             .logo {
-                width: 30px;
-                height: 30px;
+                width: 40px;
+                height: 40px;
             }
         }
     </style>
@@ -122,7 +122,7 @@
     <header>
         <div class="logo-title">
             <img src="logo.jpg" alt="Logo" class="logo">
-            <h1>King Cafe</h1>
+            <h1 style="color:red:" >King Cafe</h1>
         </div>
     </header>
 
