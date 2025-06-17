@@ -108,11 +108,11 @@
     <nav>
         <button onclick="showSection(0)" class="active">نێرگەلەکان</button>
         <button onclick="showSection(1)">خواردن</button>
-        <button onclick="showSection(2)">Section 3</button>
-        <button onclick="showSection(3)">Section 4</button>
-        <button onclick="showSection(4)">Section 5</button>
-        <button onclick="showSection(5)">Section 6</button>
-        <button onclick="showSection(6)">Section 7</button>
+        <button onclick="showSection(2)"> خواردنەوە فرێشەکان</button>
+        <button onclick="showSection(3)">خواردنەوە گازیەکان</button>
+        <button onclick="showSection(4)">خواردنەوە گەرمەکان</button>
+        <button onclick="showSection(5)">شیرینی</button>
+       
     </nav>
 
     <div id="sections">
