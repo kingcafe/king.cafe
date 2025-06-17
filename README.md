@@ -129,13 +129,13 @@
         </div>
 
         <div class="section" style="background-image: url('.jpg');">
-            <img src="foodd.jpg" alt="Food Section" />
+            <img src="xwardn.jpg" alt="Food Section" />
             <h2>خواردن</h2>
         </div>
 
         <div class="section" style="background-image: url('your-image3.jpg');">
             <h2>Section 3</h2>
-            <ul><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li></ul>
+          <img src="fresh.jpg" alt="Food Section" />
         </div>
 
         <div class="section" style="background-image: url('your-image4.jpg');">
@@ -145,7 +145,7 @@
 
         <div class="section" style="background-image: url('your-image5.jpg');">
             <h2>Section 5</h2>
-            <ul><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li></ul>
+           <img src="shirn.jpg" alt="Food Section" />
         </div>
 
         <div class="section" style="background-image: url('your-image6.jpg');">
