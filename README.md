@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,27 +13,9 @@
         }
 
         header {
-            background-color: black;
+            background-color:black ;
             text-align: center;
             padding: 20px;
-        }
-
-        .logo-title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .logo {
-            width: 40px;
-            height: 40px;
-            object-fit: contain;
-        }
-
-        header h1 {
-            color: gold;
-            margin: 0;
         }
 
         nav {
@@ -110,26 +92,21 @@
                 font-size: 20px;
                 padding: 15px;
             }
-
-            .logo {
-                width: 40px;
-                height: 40px;
-            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo-title">
-            <img src="logo.jpg" alt="Logo" class="logo">
-            <h1 style="color:red:" >King Cafe</h1>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+            <img src="logo.png" alt="Logo" style="width: 40px; height: 40px;">
+            <h1 style="color:red; margin: 0;">King Cafe</h1>
         </div>
     </header>
 
     <nav>
         <button onclick="showSection(0)" class="active">نێرگەلەکان</button>
         <button onclick="showSection(1)">خواردن</button>
-        <button onclick="showSection(2)">خواردنەوە فرێشەکان</button>
+        <button onclick="showSection(2)"> خواردنەوە فرێشەکان</button>
         <button onclick="showSection(3)">خواردنەوە گازیەکان</button>
         <button onclick="showSection(4)">خواردنەوە گەرمەکان</button>
         <button onclick="showSection(5)">شیرینی</button>
@@ -137,7 +114,7 @@
 
     <div id="sections">
         <div class="section active" style="background-image: url('nwee.jpg');">
-            <h2>تامەکان</h2><br><br>
+            <h2>تامەکان</h2> <br> <br>
             <ul>
                 <li>King 1</li><li>King 2</li><li>King 3</li><li>King 4</li>
                 <li>King 5</li><li>King 6</li><li>King 7</li><li>King 8</li>
@@ -151,7 +128,7 @@
             </ul>
         </div>
 
-        <div class="section" style="background-image: url('foodd.jpg');">
+        <div class="section" style="background-image: url('.jpg');">
             <img src="foodd.jpg" alt="Food Section" />
             <h2>خواردن</h2>
         </div>
