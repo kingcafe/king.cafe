@@ -13,7 +13,7 @@
         }
 
         header {
-            background-color: #333;
+            background-color: red;
             text-align: center;
             padding: 20px;
         }
@@ -57,7 +57,7 @@
             padding: 20px;
             background-size: cover;
             background-position: center;
-            color: black;
+            color: white;
             min-height: 300px;
         }
 
