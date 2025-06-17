@@ -98,7 +98,7 @@
 <body>
     <header>
         <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-            <img src="logo.png" alt="Logo" style="width: 40px; height: 40px;">
+            <img src="logo.jpg" alt="Logo" style="width: 40px; height: 40px;">
             <h1 style="color:red; margin: 0;">King Cafe</h1>
         </div>
     </header>
