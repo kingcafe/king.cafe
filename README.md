@@ -1,4 +1,4 @@
-
+welcome to king cafe
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -164,7 +164,7 @@
   let undoStack = [];
 
   const categories = {
-    Hookah: [
+    نێرگەلە: [
       {name: 'King 1', price: 6000},
       {name: 'King 2', price: 6000},
       {name: 'King 3', price: 6000},
@@ -176,16 +176,30 @@
       {name: 'King 9', price: 6000},
       {name: 'King 10', price: 6000},
       {name: 'King 11', price: 6000},
-      {name: 'Dw Sew', price: 6000},
-      {name: 'Bnisht', price: 6000},
-      {name: 'Baghdadi', price: 6000},
-      {name: 'Limo', price: 6000},
+      {name: 'دوو سێو', price: 6000},
+      {name: 'بنیشت', price: 6000},
+      {name: 'بغدادی', price: 6000},
+      {name: 'لیمۆ', price: 6000},
     ],
     Foods: [
-      {name: 'Pizza', price: 4000},
-      {name: 'Burger', price: 6500},
+
+      {name: ' پیتزا مریشک بچووک ', price: 4000},
+      {name: 'پیتزا مریشک وەسەت', price: 6000},
+      {name: 'پیتزا مریشک گەورە', price: 8000},
+      {name: ' پیتزا گۆشت بچووک ', price: 4000},
+      {name: 'پیتزا گۆشت وەسەت', price: 6000},
+      {name: 'پیتزا گۆشت گەورە', price: 8000},
+      {name: ' پیتزا مشکل  بچووک ', price: 4000},
+      {name: 'پیتزا مشکل وەسەت', price: 6000},
+      {name: 'پیتزا مشکل گەورە', price: 8000},
+
+{ type: 'separator' },
+
+      {name: '', price: 6500},
       {name: 'Fries', price: 3000},
       {name: 'Shawarma', price: 5500},
+       {name: 'Shawarma', price: 500},
+
     ],
     Drinks: [
       {name: 'Tea', price: 1500},
