@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -57,11 +57,15 @@
     .category h2 {
       color: #f39c12;
       margin-bottom: 10px;
+      cursor: pointer;
     }
     .items {
-      display: flex;
+      display: none;
       flex-wrap: wrap;
       gap: 10px;
+    }
+    .items.active {
+      display: flex;
     }
     .item {
       background-color: #333;
@@ -135,7 +139,6 @@
   King Cafe 
 </h1>
 
-
 <button class="view-orders" onclick="showAllOrders()">👀 View All Orders</button>
 
 <div class="tables" id="tables"></div>
@@ -154,7 +157,6 @@
   <button class="save-btn" onclick="saveOrder()">💾 ناردنی داواکاری</button>
   <button class="back-btn" onclick="undoLastAction()">↩پەشیمان بونەوە</button>
   <button class="back-btn" onclick="backToTables()">↩ Back to Tables</button>
-  
 </div>
 
 <div id="allOrders">
@@ -187,7 +189,6 @@
       {name: 'لیمۆ', price: 6000},
     ],
     خواردن: [
-
       {name: ' پیتزا مریشک بچووک ', price: 4000},
       {name: 'پیتزا مریشک وەسەت', price: 6000},
       {name: 'پیتزا مریشک گەورە', price: 8000},
@@ -197,33 +198,27 @@
       {name: ' پیتزا مشکل  بچووک ', price: 4000},
       {name: 'پیتزا مشکل وەسەت', price: 6000},
       {name: 'پیتزا مشکل گەورە', price: 8000},
-
-{ type: 'separator' },
-
       {name: 'همبرگر', price: 3000},
-     {name: 'چیزبرگر', price: 4000},
-      { type: 'separator' },
+      {name: 'چیزبرگر', price: 4000},
       {name: ' فینگر بچووک', price: 3000},
-       {name: ' فینگر وەسەت', price: 4000},
-     {name: 'فینگر گەورە', price: 5000},
-       { type: 'separator' },
+      {name: ' فینگر وەسەت', price: 4000},
+      {name: 'فینگر گەورە', price: 5000},
       {name: 'شاورمەی سینگ', price: 2000},
       {name: 'شاورمەی گۆشت', price:3000},
-     
     ],
     خواردنەوە_فرێشەکان: [
       {name: 'شیرمۆز', price: 3000},
       {name: 'شیرمۆز نوتێلا', price: 3500},
       {name: 'پرتەقال', price: 3000},
       {name: 'هەنار', price: 5000},
-        {name: 'گندۆرە', price: 1000},
-        {name: 'فراولە', price: 1000},
-        {name: 'کۆکتێل', price: 1000},
-        {name: 'مۆهیتۆ', price: 1000},
-        {name: 'تایگەر مکسیکی لیمۆ', price: 1000},  
+      {name: 'گندۆرە', price: 1000},
+      {name: 'فراولە', price: 1000},
+      {name: 'کۆکتێل', price: 1000},
+      {name: 'مۆهیتۆ', price: 1000},
+      {name: 'تایگەر مکسیکی لیمۆ', price: 1000},  
       {name: 'تایگەر مکسیکی هەنار', price: 1000},  
       {name: 'ڕێدبوڵ مکسیکی لیمۆ', price: 1000},  
-     {name: 'ڕێدبوڵ مکسیکی هەنار', price: 1000},  
+      {name: 'ڕێدبوڵ مکسیکی هەنار', price: 1000},  
     ],
     Drink2: [
       {name: 'Smoothie', price: 4500},
@@ -251,7 +246,7 @@
       btn.textContent = 'Table ' + i;
       btn.className = 'table-btn';
       btn.onclick = () => {
-        history.pushState({}, '', '?table=' + i); // ✅ update URL
+        history.pushState({}, '', '?table=' + i);
         openMenu(i);
       };
       container.appendChild(btn);
@@ -418,12 +413,20 @@
 
   createTables();
 
-  // ✅ Auto-open table from URL
   const urlParams = new URLSearchParams(window.location.search);
   const tableParam = urlParams.get('table');
   if (tableParam && !isNaN(tableParam)) {
     openMenu(parseInt(tableParam));
   }
+
+  // ✅ New: Show items when clicking a category
+  document.addEventListener('click', function (e) {
+    if (e.target.tagName === 'H2' && e.target.parentElement.classList.contains('category')) {
+      const itemsDiv = e.target.parentElement.querySelector('.items');
+      document.querySelectorAll('.items').forEach(div => div.classList.remove('active'));
+      if (itemsDiv) itemsDiv.classList.add('active');
+    }
+  });
 </script>
 
 </body>
