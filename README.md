@@ -1,189 +1,398 @@
 
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>King Cafe</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color:black ;
-            text-align: center;
-            padding: 20px;
-        }
-
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            background-color: #444;
-        }
-
-        nav button {
-            background-color: #444;
-            color: white;
-            border: none;
-            padding: 15px 20px;
-            cursor: pointer;
-            font-size: 16px;
-            flex: 1 1 auto;
-            min-width: 120px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        nav button:hover {
-            background-color: #666;
-        }
-
-        nav button.active {
-            background-color: red;
-            color: black;
-            font-weight: bold;
-        }
-
-        .section {
-            display: none;
-            padding: 20px;
-            background-size: cover;
-            background-position: center;
-            color: white;
-            min-height: 300px;
-        }
-
-        .active {
-            display: block;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            margin: 10px 0;
-            font-size: 18px;
-        }
-
-        @media (max-width: 600px) {
-            nav {
-                flex-direction: column;
-            }
-
-            nav button {
-                font-size: 18px;
-                padding: 15px;
-            }
-
-            ul li {
-                font-size: 16px;
-            }
-
-            .section {
-                padding: 15px;
-            }
-
-            header {
-                font-size: 20px;
-                padding: 15px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>King Cafe Table Orders</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #222;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #f39c12;
+    }
+    .tables {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 15px;
+      max-width: 1000px;
+      margin: 30px auto;
+    }
+    .table-btn {
+      background-color: #444;
+      border: 2px solid #f39c12;
+      padding: 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .table-btn:hover {
+      background-color: #f39c12;
+      color: black;
+    }
+    .view-orders {
+      display: block;
+      margin: 10px auto 30px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #f39c12;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .menu {
+      display: none;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .category {
+      margin: 20px 0;
+    }
+    .category h2 {
+      color: #f39c12;
+      margin-bottom: 10px;
+    }
+    .items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .item {
+      background-color: #333;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      border: 1px solid #f39c12;
+      position: relative;
+    }
+    .item.selected {
+      background-color: #f39c12;
+      color: black;
+    }
+    .item::after {
+      content: attr(data-qty);
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: red;
+      color: white;
+      font-size: 14px;
+      padding: 2px 6px;
+      border-radius: 50%;
+      display: none;
+    }
+    .item[data-qty]:not([data-qty="0"])::after {
+      display: block;
+    }
+    .back-btn, .save-btn {
+      margin: 20px 10px 0 0;
+      padding: 10px 20px;
+      background-color: #f39c12;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #allOrders {
+      display: none;
+      max-width: 800px;
+      margin: 20px auto;
+      background: #333;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h3#totalDisplay {
+      color: #0f0;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    #orderSummary {
+      margin-top: 15px;
+      padding: 10px;
+      background: #111;
+      border: 1px solid #f39c12;
+      border-radius: 8px;
+    }
+    #orderSummary ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    #orderSummary li {
+      margin: 5px 0;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-            <img src="logo.jpg" alt="Logo" style="width: 55px; height: 55px;">
-            <h1 style="color:red; margin: 0; text-decoration: none;">King Cafe</h1>
-        </div>
-    </header>
 
-    <nav>
-        <button onclick="showSection(0)" class="active">نێرگەلەکان</button>
-        <button onclick="showSection(1)">خواردن</button>
-        <button onclick="showSection(2)"> خواردنەوە فرێشەکان</button>
-        <button onclick="showSection(3)">خواردنەوە گازیەکان</button>
-        <button onclick="showSection(4)">خواردنەوە گەرمەکان</button>
-        <button onclick="showSection(5)">شیرینی</button>
-    </nav>
+<h1>🍽️ King Cafe - Table Orders</h1>
 
-    <div id="sections">
-        <div class="section active" style="background-image: url('nwee.jpg');">
-            <h2>تامەکان</h2> <br> <br>
-            <ul>
-                <li>King 1</li><li>King 2</li><li>King 3</li><li>King 4</li>
-                <li>King 5</li><li>King 6</li><li>King 7</li><li>King 8</li>
-                <li>King 9</li><li>King 10</li><li>King 11</li><li>Dw Sew</li>
-                <li>بنیشت</li><li>بغدادی</li><li>کاسترۆ</li><li>لیمۆ</li>
-            </ul>
+<button class="view-orders" onclick="showAllOrders()">👀 View All Orders</button>
 
-            <h2>فرێشەکان</h2>
-            <ul style="position: relative;">
-                <li>سندی</li><li>ئەنەناس</li><li>فرێش vip</li>
-            </ul>
-        </div>
+<div class="tables" id="tables"></div>
 
-        <div class="section" style="background-image: url('.jpg');">
-            <img src="xwardn.jpg" alt="Food Section" />
-       
-        </div>
+<div class="menu" id="menu">
+  <h2 id="menuTitle">Ordering for Table</h2>
+  <div id="categories"></div>
 
-        <div class="section" style="background-image: url('your-image3.jpg');">
-            
-          <img src="fresh.jpg" alt="Food Section" />
-        </div>
+  <h3 id="totalDisplay">💰 کۆی پارە: <span id="totalPrice">0</span> دینار</h3>
 
-        <div class="section" style="background-image: url('your-image4.jpg');">
-            <h2>Section 4</h2>
-            <ul><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li></ul>
-        </div>
+  <div id="orderSummary">
+    <h3 style="color:#0ff;">🧾 Table Order Summary</h3>
+    <ul id="orderItems"></ul>
+  </div>
 
-        <div class="section" style="background-image: url('your-image5.jpg');">
-            
-    
-        </div>
+  <button class="save-btn" onclick="saveOrder()">💾 Save Order</button>
+  <button class="back-btn" onclick="backToTables()">↩ Back to Tables</button>
+  <button class="back-btn" onclick="undoLastAction()">↩ Undo Last</button>
+</div>
 
-        <div class="section" style="background-image: url('your-image6.jpg');">
-         
-              <img src="shirn.jpg" alt="Food Section" />
+<div id="allOrders">
+  <h2 style="color: #f39c12;">📋 All Table Orders</h2>
+  <div id="orderList"></div>
+  <button class="back-btn" onclick="backToTables()">↩ Back to Tables</button>
+</div>
 
-        <div class="section" style="background-image: url('your-image7.jpg');">
-            <h2>Section 7</h2>
-            <ul><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li></ul>
-        </div>
-    </div>
+<script>
+  const tableOrders = {};
+  let currentTable = null;
+  let undoStack = [];
 
-    
-    <footer style="background-color: #222; color: white; text-align: center; padding: 20px;">
-        <h2 style="margin-bottom: 10px;">Contact Us</h2>
-        <div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
-            <a href="https://www.snapchat.com/add/king.cafe1">
-                <img src="snap.jpg" alt="snapchat" style="width: 30px; height: 30px;">
-            </a>
-            <a href="https://www.instagram.com/king.cafe1?igsh=MTg5M2E0cnlsaGRscA==">
-                <img src="insta.jpg" alt="Instagram" style="width: 30px; height: 30px;">
-            </a>
-          
-        </div>
-    </footer>
+  const categories = {
+    Hookah: [
+      {name: 'King 1', price: 6000},
+      {name: 'King 2', price: 6000},
+      {name: 'King 3', price: 6000},
+      {name: 'King 4', price: 6000},
+      {name: 'King 5', price: 6000},
+      {name: 'King 6', price: 6000},
+      {name: 'King 7', price: 6000},
+      {name: 'King 8', price: 6000},
+      {name: 'King 9', price: 6000},
+      {name: 'King 10', price: 6000},
+      {name: 'King 11', price: 6000},
+      {name: 'Dw Sew', price: 6000},
+      {name: 'Bnisht', price: 6000},
+      {name: 'Baghdadi', price: 6000},
+      {name: 'Limo', price: 6000},
+    ],
+    Foods: [
+      {name: 'Pizza', price: 4000},
+      {name: 'Burger', price: 6500},
+      {name: 'Fries', price: 3000},
+      {name: 'Shawarma', price: 5500},
+    ],
+    Drinks: [
+      {name: 'Tea', price: 1500},
+      {name: 'Coffee', price: 2500},
+      {name: 'Coke', price: 2000},
+      {name: 'Water', price: 1000},
+    ],
+    Drink2: [
+      {name: 'Smoothie', price: 4500},
+      {name: 'Lemonade', price: 4000},
+      {name: 'Iced Tea', price: 3500},
+    ],
+    Drinkyy: [
+      {name: 'Energy Drink', price: 5000},
+      {name: 'Milkshake', price: 6000},
+      {name: 'Cold Brew', price: 5500},
+    ],
+    Sweets: [
+      {name: 'Pancake', price: 3000},
+      {name: 'Cupcake', price: 2500},
+      {name: 'Trilece', price: 4000},
+      {name: 'Triangle Banana Krep', price: 4500},
+    ]
+  };
 
-    <script>
-        function showSection(index) {
-            const sections = document.querySelectorAll('.section');
-            const buttons = document.querySelectorAll('nav button');
+  function createTables() {
+    const container = document.getElementById('tables');
+    container.innerHTML = '';
+    for (let i = 1; i <= 60; i++) {
+      const btn = document.createElement('button');
+      btn.textContent = 'Table ' + i;
+      btn.className = 'table-btn';
+      btn.onclick = () => {
+        history.pushState({}, '', '?table=' + i); // ✅ update URL
+        openMenu(i);
+      };
+      container.appendChild(btn);
+    }
+  }
 
-            sections.forEach((section, i) => {
-                section.classList.toggle('active', i === index);
-            });
+  function openMenu(tableNumber) {
+    currentTable = tableNumber;
+    document.getElementById('tables').style.display = 'none';
+    document.getElementById('menu').style.display = 'block';
+    document.getElementById('allOrders').style.display = 'none';
+    document.getElementById('menuTitle').textContent = `Ordering for Table ${tableNumber}`;
 
-            buttons.forEach((btn, i) => {
-                btn.classList.toggle('active', i === index);
-            });
+    const categoriesContainer = document.getElementById('categories');
+    categoriesContainer.innerHTML = '';
+    const currentOrder = tableOrders[currentTable] || {};
+
+    Object.entries(categories).forEach(([category, items]) => {
+      const div = document.createElement('div');
+      div.className = 'category';
+      const title = document.createElement('h2');
+      title.textContent = category;
+      div.appendChild(title);
+      const itemsDiv = document.createElement('div');
+      itemsDiv.className = 'items';
+
+      items.forEach(itemObj => {
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'item';
+        itemDiv.textContent = itemObj.name;
+        itemDiv.setAttribute('data-price', itemObj.price);
+        const qty = currentOrder[itemObj.name]?.qty || 0;
+        if (qty > 0) {
+          itemDiv.classList.add('selected');
+          itemDiv.setAttribute('data-qty', qty);
+        } else {
+          itemDiv.setAttribute('data-qty', 0);
         }
-    </script>
 
+        itemDiv.onclick = () => {
+          let q = parseInt(itemDiv.getAttribute('data-qty')) || 0;
+          undoStack.push({ el: itemDiv, prevQty: q });
+          q++;
+          itemDiv.setAttribute('data-qty', q);
+          itemDiv.classList.add('selected');
+          updateTotal();
+        };
+
+        itemDiv.oncontextmenu = (e) => {
+          e.preventDefault();
+          let q = parseInt(itemDiv.getAttribute('data-qty')) || 0;
+          undoStack.push({ el: itemDiv, prevQty: q });
+          q = Math.max(0, q - 1);
+          itemDiv.setAttribute('data-qty', q);
+          if (q === 0) itemDiv.classList.remove('selected');
+          updateTotal();
+        };
+
+        itemsDiv.appendChild(itemDiv);
+      });
+
+      div.appendChild(itemsDiv);
+      categoriesContainer.appendChild(div);
+    });
+
+    updateTotal();
+  }
+
+  function updateTotal() {
+    const selectedItems = document.querySelectorAll('.item.selected');
+    let total = 0;
+    const summaryList = document.getElementById('orderItems');
+    summaryList.innerHTML = '';
+
+    selectedItems.forEach(el => {
+      const qty = parseInt(el.getAttribute('data-qty')) || 0;
+      const item = el.textContent;
+      const price = parseInt(el.getAttribute('data-price')) || 0;
+      total += qty * price;
+      const li = document.createElement('li');
+      li.textContent = `🍽️ ${item} x${qty} = ${qty * price} دینار`;
+      summaryList.appendChild(li);
+    });
+
+    document.getElementById('totalPrice').textContent = total.toLocaleString();
+  }
+
+  function saveOrder() {
+    const selectedItems = document.querySelectorAll('.item.selected');
+    const order = {};
+    let message = `📥 Order from Table ${currentTable}:\n`;
+
+    selectedItems.forEach(el => {
+      const item = el.textContent;
+      const qty = parseInt(el.getAttribute('data-qty')) || 0;
+      const price = parseInt(el.getAttribute('data-price')) || 0;
+      if (qty > 0) {
+        order[item] = { qty, price };
+        message += `• ${item} x${qty} = ${qty * price} دینار\n`;
+      }
+    });
+
+    const total = Object.values(order).reduce((sum, o) => sum + o.qty * o.price, 0);
+    message += `\n💰 Total: ${total.toLocaleString()} دینار`;
+
+    tableOrders[currentTable] = order;
+
+    sendToTelegram(message);
+    alert(`✅ Order saved and sent for Table ${currentTable}`);
+    undoStack = [];
+    backToTables();
+  }
+
+  function sendToTelegram(message) {
+    fetch(`https://api.telegram.org/bot7769917776:AAH3S6oshqdyRjg-P0433hGbaUPSeuoAgTk/sendMessage`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ chat_id: '1881744939', text: message })
+    }).catch(err => console.error('Telegram API error:', err));
+  }
+
+  function showAllOrders() {
+    const ordersDiv = document.getElementById('orderList');
+    ordersDiv.innerHTML = '';
+    const keys = Object.keys(tableOrders);
+    if (keys.length === 0) {
+      ordersDiv.innerHTML = '<p>No orders saved yet.</p>';
+    } else {
+      keys.forEach(tableNum => {
+        const order = tableOrders[tableNum];
+        const item = document.createElement('div');
+        item.style.marginBottom = '10px';
+        const items = Object.entries(order).map(([name, obj]) => `${name} x${obj.qty}`);
+        item.innerHTML = `<strong>Table ${tableNum}:</strong> ${items.join(', ')}`;
+        ordersDiv.appendChild(item);
+      });
+    }
+
+    document.getElementById('tables').style.display = 'none';
+    document.getElementById('menu').style.display = 'none';
+    document.getElementById('allOrders').style.display = 'block';
+  }
+
+  function backToTables() {
+    document.getElementById('menu').style.display = 'none';
+    document.getElementById('tables').style.display = 'grid';
+    document.getElementById('allOrders').style.display = 'none';
+  }
+
+  function undoLastAction() {
+    if (undoStack.length === 0) {
+      alert("❌ No action to undo.");
+      return;
+    }
+    const last = undoStack.pop();
+    last.el.setAttribute('data-qty', last.prevQty);
+    if (last.prevQty === 0) {
+      last.el.classList.remove('selected');
+    } else {
+      last.el.classList.add('selected');
+    }
+    updateTotal();
+  }
+
+  createTables();
+
+  // ✅ Auto-open table from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const tableParam = urlParams.get('table');
+  if (tableParam && !isNaN(tableParam)) {
+    openMenu(parseInt(tableParam));
+  }
+</script>
+
+</body>
+</html>
