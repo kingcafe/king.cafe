@@ -1,8 +1,8 @@
-welcome to king cafe
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>King Cafe Table Orders</title>
+  <title>King Cafe </title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -130,7 +130,11 @@ welcome to king cafe
 </head>
 <body>
 
-<h1>🍽️ King Cafe - Table Orders</h1>
+<h1>
+  <img src="tan.jpg" alt="Logo" style="height: 55px; vertical-align: middle; margin-right: 1px;">
+  King Cafe 
+</h1>
+
 
 <button class="view-orders" onclick="showAllOrders()">👀 View All Orders</button>
 
@@ -143,13 +147,14 @@ welcome to king cafe
   <h3 id="totalDisplay">💰 کۆی پارە: <span id="totalPrice">0</span> دینار</h3>
 
   <div id="orderSummary">
-    <h3 style="color:#0ff;">🧾 Table Order Summary</h3>
+    <h3 style="color:#0ff;">🧾 لئستی داواکاری</h3>
     <ul id="orderItems"></ul>
   </div>
 
-  <button class="save-btn" onclick="saveOrder()">💾 Save Order</button>
+  <button class="save-btn" onclick="saveOrder()">💾 ناردنی داواکاری</button>
+  <button class="back-btn" onclick="undoLastAction()">↩پەشیمان بونەوە</button>
   <button class="back-btn" onclick="backToTables()">↩ Back to Tables</button>
-  <button class="back-btn" onclick="undoLastAction()">↩ Undo Last</button>
+  
 </div>
 
 <div id="allOrders">
