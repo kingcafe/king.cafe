@@ -220,21 +220,44 @@
       {name: 'ڕێدبوڵ مکسیکی لیمۆ', price: 1000},  
       {name: 'ڕێدبوڵ مکسیکی هەنار', price: 1000},  
     ],
-    Drink2: [
-      {name: 'Smoothie', price: 4500},
-      {name: 'Lemonade', price: 4000},
-      {name: 'Iced Tea', price: 3500},
+   
+    خواردنەوەکان: [
+     
+      {name: 'تایگەڕ', price: 1500},
+      {name: 'وایت', price: 1500},
+      {name: ' سماڕت', price: 1500},
+     {name: 'پڵنگ', price: 1500},
+      {name: 'ڕێدبوڵ', price: 3000},
+      {name: 'ئاسان', price: 1000},
+     {name: 'ڕید', price: 1000},          {name: 'کۆلا', price: 1000},
+      {name: 'سپرایت', price: 1000},
+      {name: ' سۆدە', price: 1000},
+     {name: 'فریز', price: 2000},         {name: 'باربیکان', price: 1000},
+      {name: 'شەربەت لاندۆ', price: 1000},
+      {name: ' موگو موگو', price: 100},
+     {name: 'ئەسپی ڕەش', price: 1000},
+      
+         {name: 'ئاو', price: 0},
     ],
-    Drinkyy: [
-      {name: 'Energy Drink', price: 5000},
-      {name: 'Milkshake', price: 6000},
-      {name: 'Cold Brew', price: 5500},
+    خواردنەوە_گەرمەکان: [
+      {name: 'قاوەی تاڵ', price: 2000},
+      {name: 'قاوەی قزوان', price: 2000},
+      {name: 'کاپوچینۆ', price:2000 },
+      {name: 'نیسکافە', price: 2000},
+         {name: 'چوکلاتە', price: 2000},
+         {name: 'شیر', price: 1000},
+         {name: 'چا', price: 0},
+      
     ],
-    Sweets: [
-      {name: 'Pancake', price: 3000},
-      {name: 'Cupcake', price: 2500},
-      {name: 'Trilece', price: 4000},
-      {name: 'Triangle Banana Krep', price: 4500},
+    شیرینیەکان: [
+      {name: 'کریپ سادە', price: 3000},
+      {name: 'کریپ فستق', price: 4000},
+        {name: 'کریپ vip', price: 6000},
+      {name: 'کاب کێک', price: 2000},
+      {name: ' پان کێک', price: 3000},
+    {name: 'ترالیچە', price: 2000},
+       {name: 'قنادی', price: 2000},
+      
     ]
   };
 
