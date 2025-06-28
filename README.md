@@ -200,11 +200,16 @@
 
 { type: 'separator' },
 
-      {name: '', price: 6500},
-      {name: 'Fries', price: 3000},
-      {name: 'Shawarma', price: 5500},
-       {name: 'Shawarma', price: 500},
-
+      {name: 'همبرگر', price: 3000},
+     {name: 'چیزبرگر', price: 4000},
+      { type: 'separator' },
+      {name: ' فینگر بچووک', price: 3000},
+       {name: ' فینگر وەسەت', price: 4000},
+     {name: 'فینگر گەورە', price: 5000},
+       { type: 'separator' },
+      {name: 'شاورمەی سینگ', price: 2000},
+      {name: 'شاورمەی گۆشت', price:3000},
+     
     ],
     Drinks: [
       {name: 'Tea', price: 1500},
