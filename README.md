@@ -186,7 +186,7 @@
       {name: 'بغدادی', price: 6000},
       {name: 'لیمۆ', price: 6000},
     ],
-    Foods: [
+    خواردن: [
 
       {name: ' پیتزا مریشک بچووک ', price: 4000},
       {name: 'پیتزا مریشک وەسەت', price: 6000},
@@ -211,11 +211,19 @@
       {name: 'شاورمەی گۆشت', price:3000},
      
     ],
-    Drinks: [
-      {name: 'Tea', price: 1500},
-      {name: 'Coffee', price: 2500},
-      {name: 'Coke', price: 2000},
-      {name: 'Water', price: 1000},
+    خواردنەوە فرێشەکان: [
+      {name: 'شیرمۆز', price: 3000},
+      {name: 'شیرمۆز نوتێلا', price: 3500},
+      {name: 'پرتەقال', price: 3000},
+      {name: 'هەنار', price: 5000},
+        {name: 'گندۆرە', price: 1000},
+        {name: 'فراولە', price: 1000},
+        {name: 'کۆکتێل', price: 1000},
+        {name: 'مۆهیتۆ', price: 1000},
+        {name: 'تایگەر مکسیکی لیمۆ', price: 1000},  
+      {name: 'تایگەر مکسیکی هەنار', price: 1000},  
+      {name: 'ڕێدبوڵ مکسیکی لیمۆ', price: 1000},  
+     {name: 'ڕێدبوڵ مکسیکی هەنار', price: 1000},  
     ],
     Drink2: [
       {name: 'Smoothie', price: 4500},
