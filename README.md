@@ -234,7 +234,7 @@
       {name: ' سۆدە', price: 1000},
      {name: 'فریز', price: 2000},         {name: 'باربیکان', price: 1000},
       {name: 'شەربەت لاندۆ', price: 1000},
-      {name: ' موگو موگو', price: 100},
+      {name: ' موگو موگو', price: 1000},
      {name: 'ئەسپی ڕەش', price: 1000},
       
          {name: 'ئاو', price: 0},
