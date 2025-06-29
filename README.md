@@ -384,7 +384,7 @@
   }
 
   function sendToTelegram(message) {
-    fetch(`https://api.telegram.org/bot7769917776:AAH3S6oshqdyRjg-P0433hGbaUPSeuoAgTk/sendMessage`, {
+    fetch(`https://api.telegram.org/bot7769917776:AAG7myeUVy3HtP4zK-feu_iVvsdLDCO45-M/sendMessage`, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({ chat_id: '1881744939', text: message })
